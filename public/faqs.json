@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "What is your return policy?",
+    "answer": "You can return any item within 30 days of delivery, as long as it's in original condition and with the tags attached."
+  },
+  {
+    "id": 2,
+    "question": "How long does shipping take?",
+    "answer": "Standard shipping takes 3-5 business days. Express shipping is delivered within 1-2 business days."
+  },
+  {
+    "id": 3,
+    "question": "Do you offer international shipping?",
+    "answer": "Yes, we ship to most countries worldwide. Delivery time and charges depend on your location."
+  },
+  {
+    "id": 4,
+    "question": "How can I track my order?",
+    "answer": "Once your order ships, you will get an email with a tracking link. You can also track it from your account page."
+  }
+]

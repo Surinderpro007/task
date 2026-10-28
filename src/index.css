@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ---------- Theme variables ---------- */
+@theme {
+  --color-primary: rgb(27 94 75);
+  --color-primary-dark: rgb(20 72 58);
+  --color-mint: rgb(226 243 236);
+  --color-surface: rgb(248 250 249);
+  --color-ink: rgb(22 36 31);
+  --color-muted: rgb(102 117 111);
+  --color-line: rgb(229 234 231);
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+/* ---------- Components ---------- */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-primary-dark focus:outline-none focus-visible:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .field {
+    @apply w-full rounded-lg border border-line bg-white px-3 py-2 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+}
+
+/* ---------- Utilities ---------- */
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ---------- Shimmer ---------- */
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #eef1ef 25%,
+    #f6f8f7 50%,
+    #eef1ef 75%
+  );
+
+  background-size: 800px 100%;
+  animation: shimmer 1.3s infinite linear;
+}
